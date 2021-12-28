@@ -1,0 +1,76 @@
+@import "../src/assets/fonts/Poppins/poppins.scss";
+
+$dark: #222831;
+$light-dark: #393e46;
+$main-color: #ffcc00;
+$light-main-color: #b3fcff;
+$light: #fafafa;
+
+:host {
+  font-family: "Poppins";
+}
+
+.bg-dark,
+.btn-dark {
+  background: $dark !important;
+  color: $light;
+}
+
+.bg-light {
+  background: $light !important;
+  color: $dark !important;
+}
+
+.bg-transparent {
+  background: transparent !important;
+  border: transparent !important;
+}
+
+
+
+.bg-primary {
+  background: $main-color !important;
+}
+.bg-primary-gradient {
+  background:  #ffcc00 
+}
+.btn-primary {
+  background: $main-color !important;
+  border-color: $main-color !important;
+}
+
+.rounded-1 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-2 {
+  border-radius: 1rem !important;
+}
+
+.rounded-3 {
+  border-radius: 2rem !important;
+}
+
+.flip-vertical {
+  transform: scaleY(-1);
+}
+
+.text-primary {
+  color: #ffcc00 !important;
+}
+
+.w-70 {
+  width: 70% !important;
+}
+
+.text-shadow-xl {
+  text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.shadow-xl {
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%) !important;
+}

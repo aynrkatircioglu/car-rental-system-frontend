@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md my-auto">
+      <form [formGroup]="loginForm">
+        <div class="mb-3">
+          <label for="email-input" class="form-label"
+            >Lütfen mail adresinizi giriniz. </label
+          >
+          <div class="input-group has-validation">
+            <input
+              formControlName="email"
+              type="email"
+              class="form-control"
+              [ngClass]="{
+                'is-invalid':
+                  loginForm.controls['email'].errors &&
+                  (loginForm.controls['email'].touched ||
+                    loginForm.controls['email'].dirty)
+              }"
+              id="email-input"
+              placeholder="mail@mail.com"
+            />
+            <div class="invalid-feedback"> Lütfen mail adresinizi giriniz. </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <app-password-input
+            formControlName="password"
+            [errors]="loginForm.controls['password'].errors"
+            [touched]="loginForm.controls['password'].touched"
+            [dirty]="loginForm.controls['password'].dirty"
+          ></app-password-input>
+        </div>
+
+        <button
+          (click)="login()"
+          class="btn btn-primary btn-lg rounded-1 shadow-xl w-100"
+        >
+          Giriş Yap
+        </button>
+      </form>
+
+      <div class="d-flex mt-5">
+        <p class="my-auto text-secondary me-2"> Henüz kaydolmadıysanız </p>
+        <a routerLink="/signup" class="btn btn-outline-success rounded-3"
+          > Şimdi kayıt olun</a
+        >
+      </div>
+    </div>
+
+    <div class="col-md d-none d-md-block my-auto">
+      <h1 class="display-6 fw-light text-secondary text-center mb-5">
+        Sizi görmek çok güzel
+      </h1>
+      <img
+        id="car-image"
+        class="img-fluid"
+        src="../../../../assets/images/white-car-2.png"
+      />
+    </div>
+  </div>
+</div>

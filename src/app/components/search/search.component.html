@@ -1,0 +1,43 @@
+<div> 
+</div>
+<div class="bg-light col-12 rounded-1 shadow my-5 my-xl-0 p-3 ps-4">
+  <form class="row">
+    <div class="col-md form-group">
+      <label for="pick-up-date-input" class="form-label text-dark"
+        >Lokasyon seçiniz:</label
+        
+      >
+      <select class="form-select">
+        <option selected> Lokasyon seçiniz  </option>
+        <option value="1">İzmir</option>
+        <option value="2">İstanbul</option>
+        <option value="3">Ankara</option>
+      </select>
+    </div>
+    <div class="col-md form-group">
+      <label for="pick-up-date-input" class="form-label text-dark"
+        >Teslim alma tarihi:</label
+      >
+      <input
+        class="form-control"
+        type="datetime-local"
+        [value]="DateTimeNow | date: 'yyyy-MM-ddThh:mm'"
+        id="pick-up-date-input"
+      />
+    </div>
+    <div class="col-md form-group">
+      <label for="return-date-input" class="form-label text-dark"
+        >Teslim etme tarihi: </label
+      >
+      <input
+        class="form-control"
+        type="datetime-local"
+        [value]="DateTimeNow | date: 'yyyy-MM-ddThh:mm'"
+        id="return-date-input"
+      />
+    </div>
+    <button class="col-md-2 btn btn-primary rounded-1 mt-2 p-2">
+      ARA
+    </button>
+  </form>
+</div>
